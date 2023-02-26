@@ -156,6 +156,7 @@ mu = 1
 second = 2 * (first * (mu + 2 ) * x**mu / mu)
 while (math.fabs(first - second) > eps):
     mu += 2
+    
     first = second
     second = 2 * (first * (mu + 2 ) * x**mu / mu)
 print(first)
