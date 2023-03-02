@@ -13,10 +13,11 @@ def tangDanGPA(students):
 def luuFile(students):
     file = open("D:\data.txt","w",encoding='utf-8')
     for i in range(len(students)):
-        file.write("{0};{1}\n".format(students[i]["Ho va ten"], students[i]["DTB"]))
+        file.write("{0};{1}\n".format(students[i]["Ho_va_ten"], students[i]["DTB"]))
     file.close()
 
 for i in range(2):
+    
     student = {}
 
     maSV = int(i)
@@ -26,7 +27,7 @@ for i in range(2):
     diemHoa = float(input("Nhap diem hoa cua sinh vien thu {}: ".format(i + 1)))
 
     student["Ma_sinh_vien"] = maSV
-    student["Ho_ten_sinh_vien"] = hoVaTen
+    student["Ho_va_ten"] = hoVaTen
     student["Diem_toan"] = diemToan
     student["Diem_ly"] = diemLy
     student["Diem_hoa"] = diemHoa
@@ -34,5 +35,7 @@ for i in range(2):
 
     students.append(student) 
 
+tangDanGPA(students)
+luuFile(students)
 
     
