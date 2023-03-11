@@ -10,24 +10,6 @@ class StudentImplement(StudentDAO):
     def __init__(self):
         self.connect = dbContext.connect()
 
-    def importData(self):
-        try:
-            conn = self.connect()
-            cursor = conn.cursor()
-            df = pd.read_excel('input.xlsx', sheet_name='MAU', usecols='A:H', skiprows=10, nrows=52)
-            for row in df.iterrows():
-                row_data = []
-                for value in row[1]:
-                    row_data.append(value)
-                values = (row_data[0],row_data[1],row_data[2],row_data[3],row_data[4],row_data[5],row_data[6],row_data[7])
-                cursor.execute(constant.ADD_SQL, values)
-                conn.commit()
-            print("import thanh cong")
-        except:
- 
-            traceback.print_exc()
-            print("import that bai")
-
     def insertStudent(student, self):
         try:
             conn = self.connect()
