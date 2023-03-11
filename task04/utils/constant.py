@@ -2,4 +2,4 @@ ADD_SQL = "insert into students(id, code, first_name, last_name, birthOfDate, ma
 UPDATE_SQL = "update students set first_name = %s, last_name = %s, birthOfDate = %s, math = %s, physics = %s, chemistry = %s where id = %s"
 DELETE_SQL = "delete from students where id = %s"
 GET_STUDENT_SQL = "select * from students where id = %s"
-GET_ALL_SQL = "select * from students"
+SHOW_LIST_SQL = "select * from students"
